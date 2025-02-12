@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+            color: #d63384;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi Valentín? ❤️</h1>
+        <img src="pollito.png" alt="Pollito con moño">
+        <div class="buttons">
+            <button class="yes" onclick="alert('¡Sabía que dirías que sí! 💖')">Sí</button>
+            <button class="no" id="noButton">No</button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("noButton");
+        noButton.addEventListener("mouseover", function() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
